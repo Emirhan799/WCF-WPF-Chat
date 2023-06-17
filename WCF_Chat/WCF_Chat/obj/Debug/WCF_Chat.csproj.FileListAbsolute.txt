@@ -1,7 +1,0 @@
-C:\Users\ea515\source\repos\WCF_Chat\WCF_Chat\bin\WCF_Chat.dll.config
-C:\Users\ea515\source\repos\WCF_Chat\WCF_Chat\bin\WCF_Chat.dll
-C:\Users\ea515\source\repos\WCF_Chat\WCF_Chat\bin\WCF_Chat.pdb
-C:\Users\ea515\source\repos\WCF_Chat\WCF_Chat\obj\Debug\WCF_Chat.csproj.AssemblyReference.cache
-C:\Users\ea515\source\repos\WCF_Chat\WCF_Chat\obj\Debug\WCF_Chat.csproj.CoreCompileInputs.cache
-C:\Users\ea515\source\repos\WCF_Chat\WCF_Chat\obj\Debug\WCF_Chat.dll
-C:\Users\ea515\source\repos\WCF_Chat\WCF_Chat\obj\Debug\WCF_Chat.pdb
