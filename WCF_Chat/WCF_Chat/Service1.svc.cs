@@ -28,7 +28,7 @@ namespace WCF_Chat
 
         public void MesajlariSil()
         {
-            mesajlar = "";
+            mesajlar = string.Empty;
         }
     }
 }
