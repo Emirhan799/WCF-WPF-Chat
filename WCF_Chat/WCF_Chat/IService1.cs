@@ -21,25 +21,4 @@ namespace WCF_Chat
         [OperationContract]
         void MesajlariSil();
     }
-
-
-    // Hizmet işlemlerine bileşik türler eklemek için, aşağıdaki örnekte gösterildiği şekilde bir veri sözleşmesi kullanın.
-    class GizliVeri
-    {
-        public double a { get; set; }
-
-        public double b { get; set; }
-    }
-
-    [DataContract]
-    class GorunenVeri
-    {
-        public double x { get; set; }
-
-        [DataMember]
-        public double a { get; set; }
-
-        [DataMember]
-        public double b { get; set; }
-    }
 }
