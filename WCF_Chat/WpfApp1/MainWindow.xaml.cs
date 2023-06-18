@@ -47,8 +47,16 @@ namespace WpfApp1
 
         private void Gonder_Button(object sender, RoutedEventArgs e)
         {
-            ekran.Text = client.MesajEkle(txt1.Text);
-            txt1.Text = string.Empty;
+            if (!string.IsNullOrEmpty(txt1.Text) && txt1.Text.Trim().Length != 0)
+            {
+                ekran.Text = client.MesajEkle(txt1.Text);
+                txt1.Text = string.Empty;   
+            }
+            else
+            {
+                MessageBox.Show("Boş Mesaj Gönderilemez");
+                txt1.Text = string.Empty;
+            }
         }
 
         private void Sil_Button(object sender, RoutedEventArgs e)
@@ -62,15 +70,7 @@ namespace WpfApp1
         {
             if (e.Key == Key.Enter)
             {
-                if(!string.IsNullOrEmpty(txt1.Text) && txt1.Text.Trim().Length != 0)
-                {
-                    Gonder_Button(sender, e);
-                }
-                else
-                {
-                    MessageBox.Show("Boş Mesaj Gönderilemez");
-                    txt1.Text = string.Empty;
-                }
+                Gonder_Button(sender, e);
             }
         }
     }
