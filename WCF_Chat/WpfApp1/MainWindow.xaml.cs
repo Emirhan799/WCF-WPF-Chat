@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using ServiceReference1;
+using System.Windows.Threading;
 using static System.Net.Mime.MediaTypeNames;
 
 namespace WpfApp1
@@ -24,9 +25,24 @@ namespace WpfApp1
     {
         ServiceReference1.Service1Client client = new ServiceReference1.Service1Client();
 
+        private DispatcherTimer timer;
+
         public MainWindow()
         {
             InitializeComponent();
+
+            timer = new DispatcherTimer();
+            timer.Interval = TimeSpan.FromSeconds(1);
+            timer.Tick += Timer_Tick;
+            timer.Start();
+        }
+
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            if(ekran.Text != client.MesajGetir())
+            {
+                ekran.Text = client.MesajGetir();
+            }
         }
 
         private void Gonder_Button(object sender, RoutedEventArgs e)
